@@ -2,19 +2,18 @@ namespace Cars
 {
     public class Car
     {
-        public string Color { get;}
+        public string Color { get; set;}
         public float EngineVolume { get;}
-        public uint DoorsQuantity { get;}
+        public byte DoorsQuantity { get;}
         public string FuelType { get;}
         public float Price { get; set;}
 
-        public Car (string color, float engineVolume, uint doorsQuantity, string fuelType, float price)
+        public Car (string color, float engineVolume, byte doorsQuantity, string fuelType)
         {
           Color = color;
           EngineVolume = engineVolume;
           DoorsQuantity = doorsQuantity;
           FuelType = fuelType;
-          Price = price;
         }
         public void Start()
         { 

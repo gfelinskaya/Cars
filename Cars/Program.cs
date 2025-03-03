@@ -4,9 +4,18 @@
     {
          static void Main()
         {
-           Car simple = new Car("Black", 1.4f, 5, "diesel", 20);
-           Car ferrary = new SportCar("Red", 5.0f, 3, "gas", 50);
-           Car bugatti = new SportCar("Yellow", 6.0f, 3, "gas", 60);
+           Car simple = new Car("Black", 1.4f, 5, "diesel") 
+           {
+              Price = 20
+           };
+           Car ferrary = new SportCar("Red", 5.0f, 3, "gas")
+           {
+              Price = 50
+           };
+           Car bugatti = new SportCar("Yellow", 6.0f, 3, "gas")
+           {
+              Price = 60
+           };
 
            Car[] garage = new Car[] { simple, ferrary, bugatti};
 
