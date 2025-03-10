@@ -32,6 +32,7 @@
             SportCar sportCar = (SportCar)car;
             sportCar.Start();
             sportCar.Turbo();
+            sportCar.Accelerate();
             sportCar.Stop();
             }
            }
