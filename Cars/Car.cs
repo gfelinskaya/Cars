@@ -3,14 +3,17 @@ namespace Cars
     public class Car
     {
         protected uint currentSpeed;
+
+        public string VIN { get; }
         public string Color { get; set;}
         public float EngineVolume { get;}
         public byte DoorsQuantity { get;}
         public string FuelType { get;}
         public float Price { get; set;}
 
-        public Car (string color, float engineVolume, byte doorsQuantity, string fuelType)
+        public Car (string vin, string color, float engineVolume, byte doorsQuantity, string fuelType)
         {
+          VIN = vin;
           Color = color;
           EngineVolume = engineVolume;
           DoorsQuantity = doorsQuantity;

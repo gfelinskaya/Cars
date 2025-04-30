@@ -2,8 +2,8 @@ namespace Cars
 {
     public class SportCar : Car
     {
-        public SportCar(string color, float engineVolume, byte doorsQuantity, string fuelType) 
-          : base (color, engineVolume, doorsQuantity, fuelType)
+        public SportCar(string vin, string color, float engineVolume, byte doorsQuantity, string fuelType) 
+          : base (vin, color, engineVolume, doorsQuantity, fuelType)
         {
         }
 
