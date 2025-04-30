@@ -2,6 +2,7 @@ namespace Cars
 {
     public class Car
     {
+        protected uint currentSpeed;
         public string Color { get; set;}
         public float EngineVolume { get;}
         public byte DoorsQuantity { get;}
@@ -23,9 +24,10 @@ namespace Cars
         {
             Console.WriteLine("Stop driving");
         }
-        public void Accelerate()
+        public virtual void Accelerate()
         {
-            Console.WriteLine("Accelerating");
+            currentSpeed += 20;
+            Console.WriteLine($"Accelerating. Current speep {currentSpeed}");
         }
         }
     }

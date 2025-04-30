@@ -11,5 +11,10 @@ namespace Cars
         { 
             Console.WriteLine("Turbo driving");
         }
+        public override void Accelerate()
+        { 
+            currentSpeed += 40;
+            Console.WriteLine($"Accelerating. Current speep {currentSpeed}");
+        }
     }
 }
