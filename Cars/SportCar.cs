@@ -12,8 +12,11 @@ namespace Cars
             Console.WriteLine("Turbo driving");
         }
         public override void Accelerate()
-        { 
+        {            
             currentSpeed += 40;
+            if (currentSpeed > MaxSpeed)
+                throw new SpeedLimitOverflowException(currentSpeed);
+
             Console.WriteLine($"Accelerating. Current speep {currentSpeed}");
         }
     }

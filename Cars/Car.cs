@@ -11,6 +11,8 @@ namespace Cars
         public string FuelType { get;}
         public float Price { get; set;}
 
+        public uint MaxSpeed { get; init; }
+
         public Car (string vin, string color, float engineVolume, byte doorsQuantity, string fuelType)
         {
           VIN = vin;
@@ -32,5 +34,5 @@ namespace Cars
             currentSpeed += 20;
             Console.WriteLine($"Accelerating. Current speep {currentSpeed}");
         }
-        }
     }
+}

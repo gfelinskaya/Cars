@@ -11,10 +11,29 @@
 
            Car ferrary = new SportCar("VH345456546", "Red", 5.0f, 3, "gas")
            {
-              Price = 50
+              Price = 50,
+              MaxSpeed = 300
            };
 
-           Car bugatti = new SportCar("VH345345455", "Yellow", 6.0f, 3, "gas")
+            for (int i = 0; i < 100; i++)
+            {
+                try
+                {
+                    ferrary.Accelerate();
+                }
+                catch (SpeedLimitOverflowException ex)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(ex.Message);
+                    break;
+                }
+                finally
+                {
+                    Console.ResetColor();
+                }
+            }
+
+            Car bugatti = new SportCar("VH345345455", "Yellow", 6.0f, 3, "gas")
            {
               Price = 60
            };
